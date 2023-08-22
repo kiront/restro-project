@@ -1,7 +1,7 @@
 <template>
 
 <div class="nav">
-    <a href="#">Home</a>
+    <router-link to="/">Home</router-link>
     <router-link to="/add-restaurant">Add Restaurant</router-link>
     <router-link to="/update-restaurant">Update Restaurant</router-link>
     <a v-on:click="logout" href="#">Logout</a>
@@ -11,15 +11,16 @@
 </template>
 
 <script>
+
     export default{
-        name: 'HeaderComponent',
-        methods:{
-            logout(){
-                localStorage.clear();
-                this.$router.push('/login');
-            }
+    name: 'HeaderComponent',
+    methods: {
+        logout() {
+            localStorage.clear();
+            this.$router.push('/login');
         }
-    }
+    },
+}
 </script>
 
 <style>
